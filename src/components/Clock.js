@@ -70,6 +70,10 @@ class Clock extends Component {
     }, 1000);
   }
 
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
   render() {
     const data = this.state.timeRemaining;
 
